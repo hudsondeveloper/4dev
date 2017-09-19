@@ -180,10 +180,13 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\icone_busu.png" />
+    <Content Include="img\images.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -200,6 +203,16 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Telas\Cadastrar_Aluno.html" />
+    <Content Include="Telas\Cadastrar_Motorista.html" />
+    <Content Include="Telas\Cadastrar_Onibus.html" />
+    <Content Include="Telas\Cadastrar_Rota.html" />
+    <Content Include="Telas\Consultar_Aluno.html" />
+    <Content Include="Telas\Consultar_Motorista.html" />
+    <Content Include="Telas\Consultar_Onibus.html" />
+    <Content Include="Telas\Consultar_Rota.html" />
+    <Content Include="Telas\Inicial.html" />
+    <Content Include="Telas\Login.html" />
     <Content Include="Views\Content\bootstrap.css" />
     <Content Include="Views\Content\bootstrap.min.css" />
     <Content Include="Views\Content\Site.css" />
