@@ -1,0 +1,50 @@
+﻿@model USM.Models.ROTA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ROTA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MOTORISTA.NOME_MOTORISTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MOTORISTA.NOME_MOTORISTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ONIBUS.EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ONIBUS.EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TURNO.DESCRICAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TURNO.DESCRICAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOME_ROTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOME_ROTA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_ROTA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<USM.Models.ROTA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MOTORISTA.NOME_MOTORISTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ONIBUS.EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TURNO.DESCRICAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOME_ROTA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MOTORISTA.NOME_MOTORISTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ONIBUS.EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TURNO.DESCRICAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOME_ROTA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_ROTA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_ROTA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_ROTA })
+        </td>
+    </tr>
+}
+
+</table>

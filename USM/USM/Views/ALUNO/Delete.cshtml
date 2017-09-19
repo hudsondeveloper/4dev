@@ -1,0 +1,128 @@
+﻿@model USM.Models.ALUNO
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ALUNO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FACULDADE.NOME_FACULDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FACULDADE.NOME_FACULDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ROTA.NOME_ROTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ROTA.NOME_ROTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TURNO.DESCRICAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TURNO.DESCRICAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOME_ALUNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOME_ALUNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF_ALUNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF_ALUNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TITULO_ELEITOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TITULO_ELEITOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENDERECO_ALUNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENDERECO_ALUNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEFONE_ALUNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEFONE_ALUNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RUA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RUA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUMERO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUMERO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COMPLEMENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COMPLEMENTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BAIRRO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BAIRRO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CEP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CEP)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

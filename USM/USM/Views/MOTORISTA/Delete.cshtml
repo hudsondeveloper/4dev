@@ -1,0 +1,88 @@
+﻿@model USM.Models.MOTORISTA
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MOTORISTA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTADO_CIVIL.DESCRICAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTADO_CIVIL.DESCRICAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEXO.DESCRICAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEXO.DESCRICAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOME_MOTORISTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOME_MOTORISTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF_MOTORISTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF_MOTORISTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM_HABILITACAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM_HABILITACAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATA_NASC_MOTORISTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATA_NASC_MOTORISTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENDERECO_MOTORISTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENDERECO_MOTORISTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEFONE_MOTORISTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEFONE_MOTORISTA)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

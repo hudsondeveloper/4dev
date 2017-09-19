@@ -1,0 +1,105 @@
+﻿@model IEnumerable<USM.Models.ALUNO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FACULDADE.NOME_FACULDADE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ROTA.NOME_ROTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TURNO.DESCRICAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOME_ALUNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPF_ALUNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TITULO_ELEITOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENDERECO_ALUNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TELEFONE_ALUNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RUA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUMERO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMPLEMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BAIRRO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CEP)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FACULDADE.NOME_FACULDADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ROTA.NOME_ROTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TURNO.DESCRICAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOME_ALUNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CPF_ALUNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TITULO_ELEITOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENDERECO_ALUNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFONE_ALUNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RUA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUMERO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPLEMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BAIRRO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CEP)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_ALUNO }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_ALUNO }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_ALUNO })
+        </td>
+    </tr>
+}
+
+</table>

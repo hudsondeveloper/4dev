@@ -1,0 +1,75 @@
+﻿@model IEnumerable<USM.Models.MOTORISTA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO_CIVIL.DESCRICAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEXO.DESCRICAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOME_MOTORISTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPF_MOTORISTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_HABILITACAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DATA_NASC_MOTORISTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENDERECO_MOTORISTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TELEFONE_MOTORISTA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO_CIVIL.DESCRICAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEXO.DESCRICAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOME_MOTORISTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CPF_MOTORISTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_HABILITACAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATA_NASC_MOTORISTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENDERECO_MOTORISTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFONE_MOTORISTA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MATRICULA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MATRICULA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MATRICULA })
+        </td>
+    </tr>
+}
+
+</table>

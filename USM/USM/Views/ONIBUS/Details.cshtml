@@ -1,0 +1,34 @@
+﻿@model USM.Models.ONIBUS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ONIBUS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QTD_ASSENTOS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QTD_ASSENTOS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PLACA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
