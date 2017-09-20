@@ -1,44 +1,86 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
+    <meta descrition="author" content="4DEV/Danilo">
+    <link rel="stylesheet" type="text/css" href=@Url.Content("~/css/style.css")>
+    <link rel="stylesheet" type="text/css" href=@Url.Content("~/Content/bootstrap.css")>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <title>USM</title>
 </head>
-@*bruno boliu aqui*@ 
+
+
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nome do aplicativo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
-                </ul>
+    <header class="cabecalho navbar navbar-fixed-top">
+
+        <div id="logo"></div>
+
+        <div class="dropdown" style="margin-left: 14%;">
+            <button class="dropbtn">ÔNIBUS</button>
+            <div class="dropdown-content">
+                <li>@Html.ActionLink("Cadastrar", "Create", "ONIBUS")</li>
+                <li>@Html.ActionLink("Consultar", "Index", "ONIBUS")</li>
+                <li>@Html.ActionLink("Gerar Relatorio", "Index", "ONIBUS")</li>
+                
             </div>
         </div>
-    </div>
-    <div class="container body-content">
+
+        <div class="dropdown" style="margin-left: 30%;">
+            <button class="dropbtn">MOTORISTA</button>
+            <div class="dropdown-content">
+
+                <li>@Html.ActionLink("Cadastrar", "Create", "MOTORISTA")</li>
+                <li>@Html.ActionLink("Consultar", "Index", "MOTORISTA")</li>
+                <li>@Html.ActionLink("Gerar Relatório", "Index", "MOTORISTA")</li>
+                
+            </div>
+        </div>
+
+        <div class="dropdown" style="margin-left: 50%;">
+            <button class="dropbtn" style="">ROTA</button>
+            <div class="dropdown-content">
+                <li>@Html.ActionLink("Cadastrar", "Create", "ROTA")</li>
+                <li>@Html.ActionLink("Consultar", "Index", "ROTA")</li>
+                <li>@Html.ActionLink("Gerar Relatório", "Index", "ROTA")</li>
+                               
+            </div>
+        </div>
+
+        <div class="dropdown" style="margin-left: 68%;">
+            <button class="dropbtn">ALUNO</button>
+            <div class="dropdown-content">
+
+                <li>@Html.ActionLink("Cadastrar", "Create", "ALUNO")</li>
+                <li>@Html.ActionLink("Consultar", "Index", "ALUNO")</li>
+                <li>@Html.ActionLink("Gerar Relatório", "Index", "ALUNO")</li>
+                 </div>
+        </div>
+
+        <div class="dropdown" style="left: 95%; position: fixed;">
+            <button class="dropbtn">LOGIN</button>
+            <div class="dropdown-content" style="min-width: 72px; text-align: center;">
+                <a id="font_size_button" href="login.html">SAIR</a>
+            </div>
+        </div>
+    </header>
+
+
+
+    @*<div class="image-background"></div>*@
+    <div id="main">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Meu Aplicativo ASP.NET</p>
-        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+
 </body>
+
+
+
 </html>

@@ -311,11 +311,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: #333333;
-  background-color: #ffffff;
+  background-color: white;
 }
 
 input,
@@ -1648,7 +1644,9 @@ legend {
   line-height: inherit;
   color: #333333;
   border: 0;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 3px solid rgba(51, 51, 51, 0.35);
+  text-align: -webkit-auto;
+  padding-left: 20px;
 }
 
 label {
@@ -3224,9 +3222,7 @@ input[type="button"].btn-block {
   content: "";
 }
 
-.dropdown {
-  position: relative;
-}
+
 
 .dropdown-toggle:focus {
   outline: 0;

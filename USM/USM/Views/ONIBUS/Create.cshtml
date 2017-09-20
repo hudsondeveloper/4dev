@@ -4,53 +4,99 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>ONIBUS</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.PLACA, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PLACA, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PLACA, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.EMPRESA, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.EMPRESA, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.EMPRESA, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.QTD_ASSENTOS, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.QTD_ASSENTOS, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.QTD_ASSENTOS, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
 }
+ 
+<div id="image-crud">
+  <img src="~/img/images.png" height=""
+</div>
+<H1 id="font-crud">CADASTRAR ÔNIBUS</H1>
+<div id="crud-icon">
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
 </div>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+<br />
+<br />
+<br />
+<br />
+
+<br />
+<br />
+
+    <fieldset>
+        <legend>Dados do Ônibus</legend>
+        <table cellspacing="10" style="background-color: white;">
+
+
+
+            <tr>
+
+                <td>
+                    <label>Placa: </label>
+                </td>
+                <td align="left">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PLACA, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PLACA, "", new { @class = "text-danger" })
+                    </div>
+                </td>
+
+
+                <td>
+                    <label>Empresa: </label>
+                </td>
+                <td align="left">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EMPRESA, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EMPRESA, "", new { @class = "text-danger" })
+                    </div>
+                </td>
+
+                <td>
+                    <label>Quantidade de Assentos:</label>
+                </td>
+                <td align="left">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.QTD_ASSENTOS, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.QTD_ASSENTOS, "", new { @class = "text-danger" })
+                    </div>
+                </td>
+            </tr>
+
+
+        </table>
+    </fieldset>
+    <br />
+
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Cadastrar" class="btn btn-primary" />
+    </div>
+
+
+
+    @*<div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>*@
+
+    <script>
+        function formatar(mascara, documento) {
+            var i = documento.value.length;
+            var saida = mascara.substring(0, 1);
+            var texto = mascara.substring(i)
+
+            if (texto.substring(0, 1) != saida) {
+                documento.value += texto.substring(0, 1);
+            }
+
+        }
+    </script>
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
