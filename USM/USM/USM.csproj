@@ -203,6 +203,23 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Telas\Cadastrar_Aluno.html" />
+    <Content Include="Telas\Cadastrar_Motorista.html" />
+    <Content Include="Telas\Cadastrar_Onibus.html" />
+    <Content Include="Telas\Cadastrar_Rota.html" />
+    <Content Include="Telas\Consultar_Aluno.html" />
+    <Content Include="Telas\Consultar_Motorista.html" />
+    <Content Include="Telas\Consultar_Onibus.html" />
+    <Content Include="Telas\Consultar_Rota.html" />
+    <Content Include="Telas\Inicial.html" />
+    <Content Include="Telas\Login.html" />
+    <Content Include="Views\Content\bootstrap.css" />
+    <Content Include="Views\Content\bootstrap.min.css" />
+    <Content Include="Views\Content\Site.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Views\Content\style.css" />
+    <Content Include="Views\img\icone_busu.png" />
+    <Content Include="Views\img\images.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

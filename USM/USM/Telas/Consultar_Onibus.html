@@ -1,0 +1,115 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta descrition="author" content="4DEV/Danilo">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/bootstrap.css" />
+
+  <script>
+    function formatar(mascara, documento){
+    var i = documento.value.length;
+    var saida = mascara.substring(0,1);
+    var texto = mascara.substring(i)
+  
+    if (texto.substring(0,1) != saida){
+      documento.value += texto.substring(0,1);
+     }
+  
+   }
+  </script>
+
+<title>USM</title>
+  </head>
+  
+
+<body>
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <header class="cabecalho navbar navbar-fixed-top">
+
+        <div id="logo"></div>
+
+        <div class="dropdown" style="margin-left: 14%;">
+            <button class="dropbtn">ÔNIBUS</button>
+            <div class="dropdown-content">
+                <a id="font_size_button" href="Cadastrar_Onibus.html">CADASTRAR</a>
+                <a id="font_size_button" href="Consultar_Onibus.html">CONSULTAR</a>
+                <a id="font_size_button" href="Relatorio_Onibus.html">GERAR RELATÓRIO</a>
+            </div>
+        </div>
+
+        <div class="dropdown" style="margin-left: 30%;">
+            <button class="dropbtn">MOTORISTA</button>
+            <div class="dropdown-content">
+                <a id="font_size_button" href="Cadastrar_Motorista.html">CADASTRAR</a>
+                <a id="font_size_button" href="Consultar_Motorista.html">CONSULTAR</a>
+                <a id="font_size_button" href="Relatorio_Motorista.html">GERAR RELATÓRIO</a>
+            </div>
+        </div>
+
+        <div class="dropdown" style="margin-left: 50%;">
+            <button class="dropbtn" style="">ROTA</button>
+            <div class="dropdown-content">
+                <a id="font_size_button" href="Cadastrar_Rota.html">CADASTRAR</a>
+                <a id="font_size_button" href="Consultar_Rota.html">CONSULTAR</a>
+                <a id="font_size_button" href="Relatorio_Rota.html">GERAR RELATÓRIO</a>
+            </div>
+        </div>
+
+        <div class="dropdown" style="margin-left: 68%;">
+            <button class="dropbtn">ALUNO</button>
+            <div class="dropdown-content">
+                <a id="font_size_button" href="Cadastrar_Aluno.html">CADASTRAR</a>
+                <a id="font_size_button" href="Consultar_Aluno.html">CONSULTAR</a>
+                <a id="font_size_button" href="Relatorio_Aluno.html">GERAR RELATÓRIO</a>
+            </div>
+        </div>
+
+        <div class="dropdown" style="left: 95%; position: fixed;">
+            <button class="dropbtn">LOGIN</button>
+            <div class="dropdown-content" style="min-width: 72px; text-align: center;">
+                <a id="font_size_button" href="login.html">SAIR</a>
+            </div>
+        </div>
+    </header>
+
+ <!-- ONDE ESTOU? -->
+   <div id="image-crud">
+</div>
+    <H1 id="font-crud">CONSULTAR ÔNIBUS</H1>
+  <div id="crud-icon"> 
+
+</div>
+
+<div style="margin-top: 150px; margin-left: 360px;">
+ <fieldset>
+ <table cellspacing="10" style="background-color: white;">
+
+  <tr>
+   <td>
+    <label >Placa: </label>
+   </td>
+   <td align="left">
+   <input style="width: 300px; border-color: #333; font-size:medium;" class="form-control" type="text" name="placa" maxlength="8" OnKeyPress="formatar('###-####', this)" >
+  </td>
+  
+  <td align="left">
+  <button  class="btn btn-primary" type="submit" id="final-btn-consultar">Consultar</button>
+  </td>
+
+</tr>
+</table>
+</fieldset>
+
+</div>
+   
+    
+  
+    
+     <!-- RODAPÉ -->
+    <div class="copyright" style="margin-top: 211px;">
+      <label id="copyright-4dev">DESENVOLVIDO POR 4DEV</label>
+    </div>
+</body>
+
+</html>
