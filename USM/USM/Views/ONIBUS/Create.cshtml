@@ -12,30 +12,28 @@
 
 }
  
-<div id="image-crud">
-  <img src="~/img/images.png" height=""
-</div>
+<script>
+        function formatar(mascara, documento) {
+            var i = documento.value.length;
+            var saida = mascara.substring(0, 1);
+            var texto = mascara.substring(i)
+
+            if (texto.substring(0, 1) != saida) {
+                documento.value += texto.substring(0, 1);
+            }
+
+        }
+</script>
+
 <H1 id="font-crud">CADASTRAR ÔNIBUS</H1>
-<div id="crud-icon">
+<div id="crud-icon"></div>
 
-</div>
 
-<br />
-<br />
-<br />
-<br />
-
-<br />
-<br />
-
-    <fieldset>
+    <fieldset style="margin-top:15%">
         <legend>Dados do Ônibus</legend>
         <table cellspacing="10" style="background-color: white;">
 
-
-
             <tr>
-
                 <td>
                     <label>Placa: </label>
                 </td>
@@ -74,7 +72,7 @@
     <br />
 
     <div class="col-md-offset-2 col-md-10">
-        <input type="submit" value="Cadastrar" class="btn btn-primary" />
+        <input id="final-btn" type="submit" value="Cadastrar" class="btn btn-primary" />
     </div>
 
 
@@ -83,18 +81,7 @@
             @Html.ActionLink("Back to List", "Index")
         </div>*@
 
-    <script>
-        function formatar(mascara, documento) {
-            var i = documento.value.length;
-            var saida = mascara.substring(0, 1);
-            var texto = mascara.substring(i)
 
-            if (texto.substring(0, 1) != saida) {
-                documento.value += texto.substring(0, 1);
-            }
-
-        }
-    </script>
 
 
     @section Scripts {
