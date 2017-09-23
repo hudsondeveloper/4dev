@@ -86,14 +86,9 @@ label{
  #image-crud{
     opacity: 0.5;
     background-image: url(../img/images.png);
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
     background-size: cover;
-    height: 31%;
-    left: -3px;
-    background-position: left;
-    position: relative;
-    margin-right: -3px;
-    margin-bottom: 50px;
+   
 }
 
 .copyright{
